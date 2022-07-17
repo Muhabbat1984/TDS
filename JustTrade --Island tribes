@@ -1,0 +1,9 @@
+--Sells Your diamonds One by one spam execute --Island Tribes
+local args = {
+    [1] = "Resource Trader",
+    [2] = 15
+}
+
+game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+wait()
+end
