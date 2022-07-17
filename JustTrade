@@ -1,7 +1,10 @@
---Sells Your diamonds One by one spam execute --Island Tribes
+_G.AutoTrade = true
+while _G.AutoTrade == true do
 local args = {
     [1] = "Resource Trader",
-    [2] = 15
+    [2] = 18
 }
 
 game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+wait()
+end
