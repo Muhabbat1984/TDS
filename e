@@ -1,5 +1,5 @@
         for __,v in pairs(game.workspace.Idols:GetDescendants()) do -- the path
-            if v.Name == "Bag" then -- the item
+            if v.Name == "Candy" then -- the item
                 local a = Instance.new("BillboardGui",v) -- pretty much explains everything
                 a.Size = UDim2.new(3,0,1.5,2)
                 a.AlwaysOnTop = true
