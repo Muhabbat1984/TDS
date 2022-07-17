@@ -1,0 +1,76 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Islanders Private", "Serpent")
+
+if game.PlaceId == 4164611889 then
+--Universal Have Fun
+local IslandTribes = Window:NewTab("Universal")
+local IslandTribes = Universal:NewSection("Universal")
+
+-- Island Tribes Section
+IslandTribesSection:NewButton("Inf Yield", "Admin Commands (FE)", function()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+--Universal Aimbot
+IslandTribesSection:NewButton("Arsenal Aimbot GUI (Universal)", "Click on aimbot and aim at someone and hold right click", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/JustAim"))();
+end)
+
+IslandTribesSection:NewButton("Sell Diamonds (One At A Time)", "This is if you don't want to sell all your diamonds", function()
+  loadstring(game.HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/JustTrade"))();
+end)
+--Sell Stuff
+IslandTribesSection:NewToggle("Sell Diamonds", "toggle for selling diamonds", function(state)
+  if state then
+    _G.autoTrade = true
+    while _G.autoTrade == true do
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 18
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    wait()
+    end
+  else
+    _G.autoTrade = false
+    while _G.autoTrade == true do
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 18
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    wait()
+    end
+  end
+end)
+
+IslandTribesSection:NewToggle("Sell Zenyte", "toggle for selling zenyte", function(state)
+  if state then
+    _G.autoTrade = true
+    while _G.autoTrade == true do
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 19
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    wait()
+    end
+  else
+    _G.autoTrade = false
+    while _G.autoTrade == true do
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 19
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    wait()
+    end
+  end
+end)
+IslandTribesSection:NewButton("Candy ESP)", "See The Invisible Candy", function()
+  loadstring(game.HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/e"))();
+end)
