@@ -2,7 +2,7 @@ _G.AutoTrade = true
 while _G.AutoTrade == true do
 local args = {
     [1] = "Resource Trader",
-    [2] = 18
+    [2] = 19
 }
 
 game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
