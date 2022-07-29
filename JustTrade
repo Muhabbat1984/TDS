@@ -7,3 +7,4 @@ local args = {
 
 game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
 wait()
+end
