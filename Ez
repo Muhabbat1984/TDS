@@ -1,0 +1,80 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Islanders", "Ocean")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+    MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+
+    MainSection:NewButton("aimbot", "Aimbot click on the aimbot section and hold rightclick to lock in to someone", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/71YWvURH", true))()
+      end)
+--Misc
+      local Misc = Window:NewTab("Misc")
+      local MiscSection = Misc:NewSection("Misc")
+      MiscSection:NewButton("DeleteNoBuildZones", "Delete The NoBuildZones(only for you)", function()
+        game.Workspace.Map.NoBuildZones:Destroy()
+      end)
+
+--Bedwars
+local Bedwars = Window:NewTab("Bedwars")
+local BedwarsSection = Bedwars:NewSection("Bedwars")
+
+
+BedwarsSection:NewButton("Vapev4", "Bedwars VapeV4 Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+  end)
+  --Sell
+local Sell = Window:NewTab("Sell")
+local SellSection = Sell:NewSection("Sell")
+SellSection:NewButton("Sell Diamond", "Sell Diamonds", function()
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 18
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+  end)
+  SellSection:NewButton("Sell Zenyte", "Sell Zenyte", function()
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 19
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+  end)
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 21, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 65, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+
+
+    --Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+    OtherSection:NewButton("Bypassed Fly", "bird mode", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+        Fly(true)
+    end)
