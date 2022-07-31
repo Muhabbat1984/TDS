@@ -1,5 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Islanders", "Serpent")
+local Window = Library.CreateLib("Islanders", "Ocean")
+If game.PlaceId == 4164611889
     -- MAIN
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
@@ -9,14 +10,16 @@ local Window = Library.CreateLib("Islanders", "Serpent")
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
     end)
 
-    MainSection:NewButton("aimbot", "Aimbot click on the aimbot section and hold rightclick to lock in to someone", function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/71YWvURH", true))()
-      end)
+    
 --Misc
-      local Misc = Window:NewTab("Misc")
+      local Misc = Window:NewTab("Island Tribes")
       local MiscSection = Misc:NewSection("Misc")
       MiscSection:NewButton("DeleteNoBuildZones", "Delete The NoBuildZones(only for you)", function()
         game.Workspace.Map.NoBuildZones:Destroy()
+      end)
+
+      MiscSection:NewButton("Dex Explorer", "idk", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/tree", true))()
       end)
 
 --Bedwars
@@ -51,20 +54,13 @@ SellSection:NewButton("Sell Diamond", "Sell Diamonds", function()
     local Player = Window:NewTab("Player")
     local PlayerSection = Player:NewSection("Player")
 
-    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 21, 16, function(s)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-    end)
-
-    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 65, 50, function(s)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-    end)
-
-    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end)
-
-
+    
+     --Universal
+     local Universal = Window:NewTab("Universal")
+     local UniversalSection = Universal:NewSection("Universal")
+     UniversalSection:NewButton("aimbot", "e", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/71YWvURH", true))()
+     end)
     --Other
     local Other = Window:NewTab("Other")
     local OtherSection = Other:NewSection("Other")
@@ -73,6 +69,10 @@ SellSection:NewButton("Sell Diamond", "Sell Diamonds", function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
     end)
 
+    OtherSection:NewButton("Shed Bypasser", "bypasses the chat filter", function()
+loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
+    end)
+    
     OtherSection:NewButton("Bypassed Fly", "bird mode", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
 
