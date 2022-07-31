@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Islanders", "Ocean")
-If game.PlaceId == 4164611889
+local Window = Library.CreateLib("Islanders", "Serpent")
+
     -- MAIN
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
@@ -11,20 +11,26 @@ If game.PlaceId == 4164611889
     end)
 
     
---Misc
+--Island Tribes
       local Misc = Window:NewTab("Island Tribes")
       local MiscSection = Misc:NewSection("Misc")
       MiscSection:NewButton("DeleteNoBuildZones", "Delete The NoBuildZones(only for you)", function()
         game.Workspace.Map.NoBuildZones:Destroy()
       end)
-
-      MiscSection:NewButton("Dex Explorer", "idk", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/tree", true))()
+      MiscSection:NewButton("DeleteDiamondBarrier", "Delete The Diamond Barrier(only for you)", function()
+        game.Workspace.Map.Diamond Barrier:Destroy()
       end)
+      MiscSection:NewButton("Zenyte Barrier", "Delete The Diamond Barrier(only for you)", function()
+        game.Workspace.Map.Zenyte Barrier:Destroy()
+      end)
+      MiscSection:NewButton("Invis Healia Aura", "Makes Healia invis(only for you)", function()
+        game.Workspace.Replicators.NonPassive.Healia Aura:Destroy()
+      end)
+      
 
 --Bedwars
-local Bedwars = Window:NewTab("Bedwars")
-local BedwarsSection = Bedwars:NewSection("Bedwars")
+local Bedwars = Window:NewTab("BedwarsGUI")
+local BedwarsSection = Bedwars:NewSection("BedwarsGUI")
 
 
 BedwarsSection:NewButton("Vapev4", "Bedwars VapeV4 Script", function()
@@ -41,6 +47,7 @@ SellSection:NewButton("Sell Diamond", "Sell Diamonds", function()
     
     game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
   end)
+
   SellSection:NewButton("Sell Zenyte", "Sell Zenyte", function()
     local args = {
         [1] = "Resource Trader",
@@ -49,18 +56,27 @@ SellSection:NewButton("Sell Diamond", "Sell Diamonds", function()
     
     game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
   end)
-
-    --LOCAL PLAYER
-    local Player = Window:NewTab("Player")
-    local PlayerSection = Player:NewSection("Player")
-
+   SellSection:NewButton("Sell Zenyte Sword", "Sells Your Zenyte Sword", function()
+    local args = {
+        [1] = "Weapon Trader",
+        [2] = 17
+    }
     
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+end)
+
      --Universal
      local Universal = Window:NewTab("Universal")
      local UniversalSection = Universal:NewSection("Universal")
      UniversalSection:NewButton("aimbot", "e", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/71YWvURH", true))()
      end)
+     UniversalSection:NewButton("Dex Explorer", "idk", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/tree", true))()
+      end)
+      UniversalSection:NewButton("Simple Spy", "idk", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua", true))()
+      end)
     --Other
     local Other = Window:NewTab("Other")
     local OtherSection = Other:NewSection("Other")
