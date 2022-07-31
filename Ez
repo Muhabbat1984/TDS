@@ -17,15 +17,7 @@ local Window = Library.CreateLib("Islanders", "Serpent")
       MiscSection:NewButton("DeleteNoBuildZones", "Delete The NoBuildZones(only for you)", function()
         game.Workspace.Map.NoBuildZones:Destroy()
       end)
-      MiscSection:NewButton("DeleteDiamondBarrier", "Delete The Diamond Barrier(only for you)", function()
-        game.Workspace.Map.Diamond Barrier:Destroy()
-      end)
-      MiscSection:NewButton("Zenyte Barrier", "Delete The Diamond Barrier(only for you)", function()
-        game.Workspace.Map.Zenyte Barrier:Destroy()
-      end)
-      MiscSection:NewButton("Invis Healia Aura", "Makes Healia invis(only for you)", function()
-        game.Workspace.Replicators.NonPassive.Healia Aura:Destroy()
-      end)
+      
       
 
 --Bedwars
