@@ -86,3 +86,7 @@ loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))
 
         Fly(true)
     end)
+    OtherSection:NewButton("Petsimxscript", "Pet Sim X script", function()
+        loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
+            end)
+    
