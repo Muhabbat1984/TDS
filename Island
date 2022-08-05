@@ -76,6 +76,10 @@ end)
       UniversalSection:NewButton("Simple Spy", "idk", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua", true))()
       end)
+      UniversalSection:NewButton("Copy Game", "Ez", function()
+        saveinstance()
+      end)
+      
     --Other
     local Other = Window:NewTab("Other")
     local OtherSection = Other:NewSection("Other")
