@@ -56,6 +56,13 @@ SellSection:NewButton("Sell Diamond", "Sell Diamonds", function()
     
     game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
 end)
+SellSection:NewButton("Sell Soul", "Sells Your Soul", function()
+local args = {
+    [1] = "Resource Trader",
+    [2] = 22
+}
+game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+end)
 
      --Universal
      local Universal = Window:NewTab("Universal")
@@ -74,7 +81,7 @@ end)
     local OtherSection = Other:NewSection("Other")
 
     OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+        loadstring(game:HttpGet(("https://pastebin.com/raw/djBfk8Li"),true))()
     end)
     OtherSection:NewButton("BSS", "Script", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxking776/kocmoc/main/kocmoc-remastered.lua"))()
