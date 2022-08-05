@@ -76,6 +76,9 @@ end)
     OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
     end)
+    OtherSection:NewButton("BSS", "Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxking776/kocmoc/main/kocmoc-remastered.lua"))()
+    end)
 
     OtherSection:NewButton("Shed Bypasser", "bypasses the chat filter", function()
 loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
@@ -89,4 +92,41 @@ loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))
     OtherSection:NewButton("Petsimxscript", "Pet Sim X script", function()
         loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
             end)
-    
+
+            OtherSection:NewToggle("Infinite Candy Walkspeed Toggle", "Infinite Candy Walkspeed", function(state)
+                if state then
+                    _G.HackedWalkSpeed = 24  local Plrs = game:GetService("Players")  local MyPlr = Plrs.LocalPlayer local MyChar = MyPlr.Character  if MyChar then local Hum = MyChar.Humanoid Hum.Changed:connect(function() Hum.WalkSpeed = _G.HackedWalkSpeed end) Hum.WalkSpeed = _G.HackedWalkSpeed end
+                _G.HackedWalkSpeed = 24
+            
+                local Plrs = game:GetService("Players")
+            
+                local MyPlr = Plrs.LocalPlayer
+                local MyChar = MyPlr.Character
+            
+                if MyChar then
+                    local Hum = MyChar.Humanoid
+                    Hum.Changed:connect(function()
+                        Hum.WalkSpeed = _G.HackedWalkSpeed
+                    end)
+                    Hum.WalkSpeed = _G.HackedWalkSpeed
+                end
+                else
+                    _G.HackedWalkSpeed = 18  local Plrs = game:GetService("Players")  local MyPlr = Plrs.LocalPlayer local MyChar = MyPlr.Character  if MyChar then local Hum = MyChar.Humanoid Hum.Changed:connect(function() Hum.WalkSpeed = _G.HackedWalkSpeed end) Hum.WalkSpeed = _G.HackedWalkSpeed end
+                _G.HackedWalkSpeed = 18
+            
+                local Plrs = game:GetService("Players")
+            
+                local MyPlr = Plrs.LocalPlayer
+                local MyChar = MyPlr.Character
+            
+                if MyChar then
+                    local Hum = MyChar.Humanoid
+                    Hum.Changed:connect(function()
+                        Hum.WalkSpeed = _G.HackedWalkSpeed
+                    end)
+                    Hum.WalkSpeed = _G.HackedWalkSpeed
+                end
+                end
+            end)
+
+                
