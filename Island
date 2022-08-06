@@ -63,6 +63,24 @@ local args = {
 }
 game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
 end)
+SellSection:NewButton("Sell Dim Bow", "Sells dim Bow", function()
+        local args = {
+            [1] = "Weapon Trader",
+            [2] = 16
+        }
+        
+        game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    end)
+    SellSection:NewButton("Sell Zen Bow", "Sells Zen Bow", function()
+        local args = {
+            [1] = "Weapon Trader",
+            [2] = 18
+        }
+        
+        game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    end)
+local Craft = Window:NewTab("Craft")
+local CraftSection = Craft:NewSection("Crafting")
 
      --Universal
      local Universal = Window:NewTab("Universal")
@@ -94,6 +112,10 @@ end)
     OtherSection:NewButton("Shed Bypasser", "bypasses the chat filter", function()
 loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
     end)
+    OtherSection:NewButton("Nuke Loader", "reee", function()
+        _G.key = "thekeys" 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+            end)
     
     OtherSection:NewButton("Bypassed Fly", "bird mode", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
