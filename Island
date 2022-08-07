@@ -125,7 +125,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACK
     OtherSection:NewButton("Petsimxscript", "Pet Sim X script", function()
         loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
             end)
-
+                    OtherSection:NewButton("Translator", "Translates", function()
+                        loadstring(game:HttpGet('https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/aes'))()
+                            end)
             OtherSection:NewToggle("Infinite Candy Walkspeed Toggle", "Infinite Candy Walkspeed", function(state)
                 if state then
                     _G.HackedWalkSpeed = 24  local Plrs = game:GetService("Players")  local MyPlr = Plrs.LocalPlayer local MyChar = MyPlr.Character  if MyChar then local Hum = MyChar.Humanoid Hum.Changed:connect(function() Hum.WalkSpeed = _G.HackedWalkSpeed end) Hum.WalkSpeed = _G.HackedWalkSpeed end
