@@ -26,6 +26,10 @@ local Window = Library.CreateLib("Islanders", "Serpent")
       MiscSection:NewButton("Break Moonstone gate", "Breaks Gates", function()
         game:GetService("Workspace").Replicators.NonPassive["Moonstone Gate"]:Destroy()
       end)
+      MiscSection:NewButton("Break Obsidian gate", "Breaks Gates", function()
+        game:GetService("Workspace").Replicators.NonPassive["Obsidian Gate"]:Destroy()
+      end)
+      
       
 --Bedwars
 local Bedwars = Window:NewTab("BedwarsGUI")
