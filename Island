@@ -17,9 +17,16 @@ local Window = Library.CreateLib("Islanders", "Serpent")
       MiscSection:NewButton("DeleteNoBuildZones", "Delete The NoBuildZones(only for you)", function()
         game.Workspace.Map.NoBuildZones:Destroy()
       end)
+      MiscSection:NewButton("Invis Healia", "Makes Healia invis only for u", function()
+        game:GetService("Workspace").Replicators.NonPassive["Healing Aura"]:Destroy()
+      end)
+      MiscSection:NewButton("Break Diamond Barrier", "Breaks diamond barrier", function()
+        game:GetService("Workspace").Replicators.NonPassive["Diamond Barrier"]:Destroy()
+      end)
+      MiscSection:NewButton("Break Moonstone gate", "Breaks Gates", function()
+        game:GetService("Workspace").Replicators.NonPassive["Moonstone Gate"]:Destroy()
+      end)
       
-      
-
 --Bedwars
 local Bedwars = Window:NewTab("BedwarsGUI")
 local BedwarsSection = Bedwars:NewSection("BedwarsGUI")
@@ -128,6 +135,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACK
                     OtherSection:NewButton("Translator", "Translates", function()
                         loadstring(game:HttpGet('https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/aes'))()
                             end)
+                            OtherSection:NewButton("Arsenal", "e", function()
+                                loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+                                    end)
+                            
             OtherSection:NewToggle("Infinite Candy Walkspeed Toggle", "Infinite Candy Walkspeed", function(state)
                 if state then
                     _G.HackedWalkSpeed = 24  local Plrs = game:GetService("Players")  local MyPlr = Plrs.LocalPlayer local MyChar = MyPlr.Character  if MyChar then local Hum = MyChar.Humanoid Hum.Changed:connect(function() Hum.WalkSpeed = _G.HackedWalkSpeed end) Hum.WalkSpeed = _G.HackedWalkSpeed end
