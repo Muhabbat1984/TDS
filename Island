@@ -29,7 +29,7 @@ local Window = Library.CreateLib("Islanders", "Serpent")
       MiscSection:NewButton("Break Obsidian gate", "Breaks Gates", function()
         game:GetService("Workspace").Replicators.NonPassive["Obsidian Gate"]:Destroy()
       end)
-      MiscSection:NewButton("Break Diamond Barrier", "Breaks diamond barrier", function()
+      MiscSection:NewButton("Break Zenyte Barrier", "Breaks Zen barrier", function()
         game:GetService("Workspace")["Zenyte Barrier"]:Destroy()
       end)
       
