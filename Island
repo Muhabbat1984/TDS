@@ -116,6 +116,10 @@ local CraftSection = Craft:NewSection("Crafting")
     local Other = Window:NewTab("Other")
     local OtherSection = Other:NewSection("Other")
 
+    OtherSection:NewButton("TDS Auto Chain Commanders", "e", function()
+      loadstring(game:HttpGet("https://moneymaker.cf/loadstrings/tdsautochain"))()
+  end)
+
     OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
         loadstring(game:HttpGet(("https://pastebin.com/raw/djBfk8Li"),true))()
     end)
@@ -181,5 +185,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACK
                 end
                 end
             end)
-
-                
