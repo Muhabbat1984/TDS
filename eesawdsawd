@@ -1,1 +1,22 @@
-local CollectionService = game:GetService("CollectionService") local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/jsdnfjdsfdjnsmvkjhlkslzLIB", true))() loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/sjkdkjlfdjnnmklcvxjNotifCr"))() local w = lib:CreateWindow("Players Cash") local ToUpdate = {} local Players = {} for i,v in pairs(game:GetService("ReplicatedStorage").StateReplicators:GetChildren()) do if CollectionService:HasTag(v, "Player") and v:GetAttribute("Cash") ~= 0 then w:Section(v:GetAttribute("Name").." : "..v:GetAttribute("Cash")) for _,c in pairs(game.CoreGui:GetDescendants()) do if c:IsA("TextLabel") and string.find(c.Text, v:GetAttribute("Cash")) then W                ToUpdate[v:GetAttribute("Name")] = c Players[v:GetAttribute("Name")] = v end end end end say("SUCCESS","Loaded - Made by Money Maker") while wait(.3) do for i,v in next,ToUpdate do v.Text = i.." : "..Players[i]:GetAttribute("Cash") end end
+local CollectionService = game:GetService("CollectionService")
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/jsdnfjdsfdjnsmvkjhlkslzLIB", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/sjkdkjlfdjnnmklcvxjNotifCr"))()
+local w = lib:CreateWindow("Players Cash")
+local ToUpdate = {}
+local Players = {}
+for i,v in pairs(game:GetService("ReplicatedStorage").StateReplicators:GetChildren()) do
+    if CollectionService:HasTag(v, "Player") and v:GetAttribute("Cash") ~= 0 then
+        w:Section(v:GetAttribute("Name").." : "..v:GetAttribute("Cash"))
+        for _,c in pairs(game.CoreGui:GetDescendants()) do
+            if c:IsA("TextLabel") and string.find(c.Text, v:GetAttribute("Cash")) then
+                ToUpdate[v:GetAttribute("Name")] = c
+                Players[v:GetAttribute("Name")] = v
+            end
+        end
+    end
+end
+say("SUCCESS","Loaded - Made by Money Maker")
+while wait(.3) do
+    for i,v in next,ToUpdate do
+        v.Text = i.." : "..Players[i]:GetAttribute("Cash")
+    end
