@@ -20,3 +20,4 @@ while wait(.3) do
     for i,v in next,ToUpdate do
         v.Text = i.." : "..Players[i]:GetAttribute("Cash")
     end
+end
