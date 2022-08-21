@@ -122,6 +122,9 @@ local CraftSection = Craft:NewSection("Crafting")
   TDSSection:NewButton("TDS Sell Farms at wave 40", "e", function()
     local suc, err = pcall(function() local lPlayer = game.Players.LocalPlayer local pGui = lPlayer.PlayerGui local gameGui = pGui:FindFirstChild("GameGui") local waveFrame = gameGui.Health local waveF = waveFrame.Wave local maxWaves = {Easy=30, Normal=40, Insane=40, Hardcore=50} local function Split(s, delimiter) return s:split(delimiter) end waveF:GetPropertyChangedSignal("Text"):Connect(function() local wave = Split(waveF.Text," ")[2] print(wave) if tostring(wave) == maxWaves[game.ReplicatedStorage.State.Difficulty.Value] then for i,v in pairs(game.Workspace.Towers:GetChildren()) do if v:WaitForChild("Owner").Value == game.Players.LocalPlayer and v:FindFirstChild("HumanoidRootPart") and v.HumanoidRootPart:FindFirstChild("Counter") and v.HumanoidRootPart.Counter:FindFirstChild("Cash") then event:InvokeServer("Troops","Sell",{["Troop"] = v}) wait() end end end end) end) if not suc then print(err) end
 end)
+TDSSection:NewButton("TDS Show Money", "e", function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/eesawdsawd"))()
+end)
     --Other
     local Other = Window:NewTab("Other")
     local OtherSection = Other:NewSection("Other")
