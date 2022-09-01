@@ -1,12 +1,12 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Starving Artists Hub", "Sentinel")
 local Starving = Window:NewTab("Starving Artists")
-     local StarvingSection = Starting Artists:NewSection("Starving")
-TDSSection:NewButton("Copy Arts with timer undetected(Timer)", "Ez", function()
+local StarvingSection = Starving:NewSection("Starving")
+StarvingSection:NewButton("Copy Arts with timer undetected(Timer)", "Ez", function()
   Timer = true
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/anisnouacer1/My-Roblox-Scripts/main/Starving%20Artist%20%5BNew%5D.lua')))()
 end)
-TDSSection:NewButton("Copy Art Detected No Timer  ", "e", function()
+StarvingSection:NewButton("Copy Art Detected No Timer  ", "e", function()
   Timer = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/anisnouacer1/My-Roblox-Scripts/main/Starving%20Artist%20%5BNew%5D.lua')))()
 end)
