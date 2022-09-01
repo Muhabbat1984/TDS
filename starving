@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Starving Artists Hub", "Sentinel")
-local TDS = Window:NewTab("Starving Artists")
+local Starving = Window:NewTab("Starving Artists")
      local StarvingSection = Starting Artists:NewSection("Starving")
 TDSSection:NewButton("Copy Arts with timer undetected(Timer)", "Ez", function()
   Timer = true
