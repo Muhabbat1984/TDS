@@ -1,0 +1,140 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Island Tribes Gui", "Ocean")
+
+--Island Tribes
+      local Misc = Window:NewTab("Island Tribes")
+      local MiscSection = Misc:NewSection("Misc")
+      MiscSection:NewButton("DeleteNoBuildZones", "Delete The NoBuildZones(only for you)", function()
+        game.Workspace.Map.NoBuildZones:Destroy()
+      end)
+      MiscSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+      MiscSection:NewButton("Invis Healia", "Makes Healia invis only for u", function()
+        game:GetService("Workspace").Replicators.NonPassive["Healing Aura"]:Destroy()
+      end)
+      MiscSection:NewButton("Break Diamond Barrier", "Breaks diamond barrier", function()
+        game:GetService("Workspace")["Diamond Barrier"]:Destroy()
+      end)
+      MiscSection:NewButton("Break Moonstone gate", "Breaks Gates", function()
+        game:GetService("Workspace").Replicators.NonPassive["Moonstone Gate"]:Destroy()
+      end)
+      MiscSection:NewButton("Break Obsidian gate", "Breaks Gates", function()
+        game:GetService("Workspace").Replicators.NonPassive["Obsidian Gate"]:Destroy()
+      end)
+      MiscSection:NewButton("Break Zenyte Barrier", "Breaks Zen barrier", function()
+        game:GetService("Workspace")["Zenyte Barrier"]:Destroy()
+      end)
+      MiscSection:NewButton("Vapev4", "Bedwars VapeV4 Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+      end)
+      MiscSection:NewButton("aimbot", "e", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/71YWvURH", true))()
+     end)
+     MiscSection:NewToggle("Infinite Candy Walkspeed Toggle", "Infinite Candy Walkspeed", function(state)
+      if state then
+          _G.HackedWalkSpeed = 24  local Plrs = game:GetService("Players")  local MyPlr = Plrs.LocalPlayer local MyChar = MyPlr.Character  if MyChar then local Hum = MyChar.Humanoid Hum.Changed:connect(function() Hum.WalkSpeed = _G.HackedWalkSpeed end) Hum.WalkSpeed = _G.HackedWalkSpeed end
+      _G.HackedWalkSpeed = 24
+  
+      local Plrs = game:GetService("Players")
+  
+      local MyPlr = Plrs.LocalPlayer
+      local MyChar = MyPlr.Character
+  
+      if MyChar then
+          local Hum = MyChar.Humanoid
+          Hum.Changed:connect(function()
+              Hum.WalkSpeed = _G.HackedWalkSpeed
+          end)
+          Hum.WalkSpeed = _G.HackedWalkSpeed
+      end
+      else
+          _G.HackedWalkSpeed = 18  local Plrs = game:GetService("Players")  local MyPlr = Plrs.LocalPlayer local MyChar = MyPlr.Character  if MyChar then local Hum = MyChar.Humanoid Hum.Changed:connect(function() Hum.WalkSpeed = _G.HackedWalkSpeed end) Hum.WalkSpeed = _G.HackedWalkSpeed end
+      _G.HackedWalkSpeed = 18
+  
+      local Plrs = game:GetService("Players")
+  
+      local MyPlr = Plrs.LocalPlayer
+      local MyChar = MyPlr.Character
+  
+      if MyChar then
+          local Hum = MyChar.Humanoid
+          Hum.Changed:connect(function()
+              Hum.WalkSpeed = _G.HackedWalkSpeed
+          end)
+          Hum.WalkSpeed = _G.HackedWalkSpeed
+      end
+      end
+  end)
+      
+
+  --Sell
+local Sell = Window:NewTab("Sell")
+local SellSection = Sell:NewSection("Sell")
+SellSection:NewButton("Sell Diamond", "Sell Diamonds", function()
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 18
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+  end)
+
+  SellSection:NewButton("Sell Zenyte", "Sell Zenyte", function()
+    local args = {
+        [1] = "Resource Trader",
+        [2] = 19
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+  end)
+   SellSection:NewButton("Sell Zenyte Sword", "Sells Your Zenyte Sword", function()
+    local args = {
+        [1] = "Weapon Trader",
+        [2] = 17
+    }
+    
+    game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+end)
+SellSection:NewButton("Sell Soul", "Sells Your Soul", function()
+local args = {
+    [1] = "Resource Trader",
+    [2] = 22
+}
+game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+end)
+SellSection:NewButton("Sell Dim Bow", "Sells dim Bow", function()
+        local args = {
+            [1] = "Weapon Trader",
+            [2] = 16
+        }
+        
+        game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    end)
+    SellSection:NewButton("Sell Zen Bow", "Sells Zen Bow", function()
+        local args = {
+            [1] = "Weapon Trader",
+            [2] = 18
+        }
+        
+        game:GetService("ReplicatedStorage").References.Comm.Events.TradeTrader:FireServer(unpack(args))
+    end)
+local Craft = Window:NewTab("Craft")
+local CraftSection = Craft:NewSection("Crafting")
+
+     --Universal
+     local Universal = Window:NewTab("Universal")
+     local UniversalSection = Universal:NewSection("Universal")
+     
+    
+     UniversalSection:NewButton("Dex Explorer", "idk", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/tree", true))()
+      end)
+      UniversalSection:NewButton("Simple Spy", "idk", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua", true))()
+      end)
+      UniversalSection:NewButton("Copy Game", "Ez", function()
+        saveinstance()
+      end)
+                            
+            
