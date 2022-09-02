@@ -1,0 +1,22 @@
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Decompiling Hub", "Synapse")
+--Hub
+      local Hub = Window:NewTab("Hub")
+      local HubSection = Hub:NewSection("H-U-B")
+HubSection:NewButton("Decompile Game", "e", function()
+        saveinstance({decomptype = new})
+      end)
+
+      HubSection:NewButton("Dex Explorer view models", "e", function()
+        loadstring(game:HttpGet("https://controlc.com/548a5a33", true))()
+      end)
+
+
+HubSection:NewButton("Simply Spy (view remotes)", "e", function()
+        loadstring(game:httpGet('https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua'))()
+      end)
+      
+
+
+
