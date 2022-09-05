@@ -1,6 +1,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Island Tribes Gui", "Ocean")
-
+local UI = Window:NewTab("GUI")
+      local UISection = UI:NewSection("UIGUI")
+      UISection:NewKeybind("Toggle UI", "Right Alt", Enum.KeyCode.RightAlt, function()
+      Library:ToggleUI()
+    end)
 --Island Tribes
       local Misc = Window:NewTab("Island Tribes")
       local MiscSection = Misc:NewSection("Misc")
