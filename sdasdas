@@ -16,7 +16,9 @@ HubSection:NewButton("Decompile Game", "e", function()
 HubSection:NewButton("Simply Spy (view remotes)", "e", function()
         loadstring(game:httpGet('https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua'))()
       end)
-      
+ HubSection:NewKeybind("Toggle UI", "Right Alt", Enum.KeyCode.RightAlt, function()
+      Library:ToggleUI()
+    end)
 
 
 
