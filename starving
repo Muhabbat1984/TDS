@@ -10,3 +10,6 @@ StarvingSection:NewButton("Copy Art Detected No Timer  ", "e", function()
   Timer = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/anisnouacer1/My-Roblox-Scripts/main/Starving%20Artist%20%5BNew%5D.lua')))()
 end)
+StarvingSection:NewKeybind("Toggle UI", "Right Alt", Enum.KeyCode.RightAlt, function()
+      Library:ToggleUI()
+    end)
