@@ -5,7 +5,7 @@ local Window = Library.CreateLib("Hub GUI", "DarkTheme")
 --Hub
       local Hub = Window:NewTab("Hub")
       local HubSection = Hub:NewSection("H-U-B")
-
+      
       HubSection:NewButton("Island Tribes GUI", "e", function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/IslandTribesGUI'))()
       end)
@@ -23,4 +23,7 @@ local Window = Library.CreateLib("Hub GUI", "DarkTheme")
       end)
       HubSection:NewButton("Shitty Grounds (Elemental Battlegrounds", "shit", function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/shitty%20battlegrounds'))()
+    end)
+    HubSection:NewKeybind("Toggle UI", "Right Alt", Enum.KeyCode.RightAlt, function()
+      Library:ToggleUI()
     end)
