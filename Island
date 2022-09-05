@@ -1,3 +1,4 @@
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Hub GUI", "DarkTheme")
 
@@ -20,3 +21,6 @@ local Window = Library.CreateLib("Hub GUI", "DarkTheme")
       HubSection:NewButton("Decompile Tools", "e", function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/sdasdas'))()
       end)
+      HubSection:NewButton("Shitty Grounds (Elemental Battlegrounds", "shit", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/KromeBookWASTaken/aimbot.lua/main/shitty%20battlegrounds'))()
+    end)
